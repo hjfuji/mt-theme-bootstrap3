@@ -1,0 +1,60 @@
+<$mt:Include module="設定"$>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="<$mt:PublishCharset$>">
+    <meta name="generator" content="<$mt:ProductName version="1"$>">
+    <title>コメントのプレビュー - <$mt:BlogName encode_html="1"$></title>
+    <$mt:Include module="HTMLヘッダー"$>
+    <script type="text/javascript">
+      var user = <$mt:UserSessionState$>;
+      var is_preview = true;
+    </script>
+    <script src="<$mt:Link template="javascript"$>"></script>
+  </head>
+  <body>
+    <$mt:Include module="バナーヘッダー"$>
+
+    <div class="container">
+
+      <$mt:Include module="Jumbotron"$>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-9">
+          <ul class="breadcrumb breadcrumb-list">
+            <li class="breadcrumb-list-item"><a href="<$mt:BlogURL encode_html="1"$>">Home</a></li>
+            <li class="breadcrumb-list-item"><$mt:EntryTitle$></li>
+          </ul>
+
+          <div id="comment-preview-main" class="main" role="main">
+            <section>
+              <h2 class="title">コメントのプレビュー</h2>
+              <article id="comment-<$mt:CommentID$>" class="comment<mt:IfCommentParent> comment-reply</mt:IfCommentParent><mt:IfCommenterIsEntryAuthor> entry-author-comment</mt:IfCommenterIsEntryAuthor>">
+                <header>
+                  <h3><mt:IfCommentParent><$mt:CommentAuthorLink$>から<a href="<mt:CommentParent><$mt:CommentLink$></mt:CommentParent>"><mt:CommentParent><$mt:CommentAuthor$></mt:CommentParent></a>への返信<mt:Else><$mt:CommentAuthorLink$></mt:IfCommentParent></h3>
+                  <a href="<$mt:CommentLink$>"><time datetime="<$mt:CommentDate format_name="iso8601"$>"><$mt:CommentDate$></time></a>
+                </header>
+                <$mt:CommentBody$>
+              </article>
+              <$mt:Include module="コメント入力フォーム"$>
+            </section>
+          </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-3">
+          <$mt:WidgetSet name="関連コンテンツ"$>
+        </div>
+      </div>
+
+    </div><!-- /.container -->
+
+    <$mt:Include module="バナーフッター"$>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="<$mt:StaticWebPath$>jquery/jquery.min.js"></script>
+    <script src="<$mt:Link template="javascript_theme" encode_html="1">"></script>
+    <script src="<$mt:BlogURL$>js/bootstrap.min.js"></script>
+  </body>
+</html>

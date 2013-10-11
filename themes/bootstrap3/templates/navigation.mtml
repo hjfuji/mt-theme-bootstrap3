@@ -1,0 +1,9 @@
+          <ul class="nav navbar-nav">
+            <li<mt:if name="main_index"> class="active"</mt:If>><a href="<$mt:BlogURL$>">Home</a></li>
+<mt:Pages tag="@ABOUT_PAGE" limit="1">
+            <li<mt:If tag="PageID" eq="$page_id"> class="active"</mt:If>><a href="<$mt:PagePermalink encode_html="1"$>">アバウト</a></li>
+</mt:Pages>
+<mt:Pages tag="@ADD_TO_SITE_NAV">
+            <li<mt:If tag="PageID" eq="$page_id"> class="active"</mt:If>><a href="<$mt:PagePermalink encode_html="1"$>"><$mt:PageTitle$></a></li>
+</mt:Pages>
+          </ul>

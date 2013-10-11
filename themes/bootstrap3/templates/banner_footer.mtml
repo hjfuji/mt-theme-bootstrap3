@@ -1,0 +1,15 @@
+<mt:SetVarBlock name="copyright_text">&copy; Copyright <$mt:Date format="%Y"$>.</mt:SetVarBlock>
+<div id="footer">
+  <div class="container">
+      <div class="row">
+        <div id="banner-footer-nav" class="col-xs-12 col-sm-9">
+          <$mt:Include module="ナビゲーション"$>
+        </div>
+
+        <div id="banner-footer-license" class="col-xs-6 col-sm-3">
+          <p class="license"><mt:BlogIfCCLicense>このブログは<a rel="license" href="<$mt:BlogCCLicenseURL$>">クリエイティブ・コモンズ</a>でライセンスされています。<mt:Else><$mt:Var name="copyright_text"$></mt:BlogIfCCLicense></p>
+          <p class="poweredby">Powered by <a href="http://www.sixapart.jp/movabletype/"><$MTProductName$></a></p>
+        </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+<$mt:Include module="設定"$>
+<!DOCTYPE html>
+<html lang="<$mt:BlogLanguage$>" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    <meta charset="<$mt:PublishCharset$>">
+    <meta name="description" content="<$mt:PageExcerpt remove_html="1"$>">
+    <meta name="generator" content="<$mt:ProductName version="1"$>">
+    <title><$mt:PageTitle encode_html="1"$> - <$mt:BlogName encode_html="1"$></title>
+    <$mt:Include module="HTMLヘッダー"$>
+    <!-- Open Graph Protocol -->
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="<$mt:BlogLanguage setvar="blog_lang"$><mt:If name="blog_lang" eq="ja">ja_JP<mt:else><$mt:Var name="blog_lang"$></mt:If>">
+    <meta property="og:title" content="<$mt:PageTitle encode_html="1"$>">
+    <meta property="og:url" content="<$mt:PagePermalink encode_html="1"$>">
+    <meta property="og:description" content="<$mt:PageExcerpt remove_html="1" encode_html="1"$>">
+    <meta property="og:site_name" content="<$mt:BlogName encode_html="1"$>">
+    <meta property="og:image" content="<mt:Assets type="image" tag="@SITE_ICON" limit="1"><$mt:AssetThumbnailURL width="320px" square="1" encode_html="1"$><mt:Else><$mt:SupportDirectoryURL with_domain="1" encode_html="1"$>theme_static/rainier/img/siteicon-sample.png</mt:Assets>">
+    <!-- Metadata -->
+    <meta itemprop="description" content="<$mt:PageExcerpt remove_html="1"$>">
+    <link itemprop="url" href="<$mt:PagePermalink encode_html="1"$>">
+    <link itemprop="image" href="<mt:Assets type="image" tag="@SITE_ICON" limit="1"><$mt:AssetThumbnailURL width="320px" square="1" encode_html="1"$><mt:Else><$mt:SupportDirectoryURL with_domain="1" encode_html="1"$>theme_static/rainier/img/siteicon-sample.png</mt:Assets>">
+  </head>
+  <body>
+    <$mt:Include module="バナーヘッダー"$>
+
+    <div class="container">
+
+      <$mt:Include module="Jumbotron"$>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-9 main" role="main">
+          <ul class="breadcrumb breadcrumb-list">
+            <li class="breadcrumb-list-item"><a href="<$mt:BlogURL encode_html="1"$>">Home</a></li>
+            <li class="breadcrumb-list-item"><$mt:PageTitle$></li>
+          </ul>
+          <section class="page">
+            <h2 itemprop="name" class="title"><$mt:PageTitle$></h2>
+            <div itemprop="text">
+              <$mt:PageBody$>
+              <$mt:PageMore$>
+            </div>
+            <footer>
+               <p>更新日: <time itemprop="dateModified" datetime="<$mt:PageModifiedDate format_name="iso8601"$>"><$mt:PageModifiedDate format="%x %X"$></time></p>
+            </footer>
+          </section>
+        </div>
+
+        <div class="col-xs-6 col-sm-3">
+          <$mt:WidgetSet name="関連コンテンツ"$>
+        </div>
+      </div>
+
+    </div><!-- /.container -->
+
+    <$mt:Include module="バナーフッター"$>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="<$mt:StaticWebPath$>jquery/jquery.min.js"></script>
+    <script src="<$mt:Link template="javascript_theme" encode_html="1">"></script>
+    <script src="<$mt:BlogURL$>js/bootstrap.min.js"></script>
+  </body>
+</html>
