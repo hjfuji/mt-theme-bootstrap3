@@ -2,7 +2,7 @@
   <div class="widget-content">
     <form method="get" id="search" action="<$mt:CGIPath$><$mt:SearchScript$>">
       <div>
-        <input type="text" name="search" value="<$mt:SearchString$>" placeholder="検索...">
+        <input type="text" name="search" value="<$mt:SearchString$>" placeholder="<__trans phrase="Search">...">
 <mt:If name="search_results">
         <input type="hidden" name="IncludeBlogs" value="<$mt:SearchIncludeBlogs$>">
 <mt:Else>
@@ -10,7 +10,7 @@
 </mt:If>
         <input type="hidden" name="limit" value="<$mt:SearchMaxResults$>">
         <button type="submit" name="button">
-          <img alt="検索" src="<$mt:SupportDirectoryURL encode_html="1"$>theme_static/rainier/img/search-icon.png">
+          <img alt="<__trans phrase="Search">" src="<$mt:SupportDirectoryURL encode_html="1"$>theme_static/rainier/img/search-icon.png">
         </button>
       </div>
     </form>
