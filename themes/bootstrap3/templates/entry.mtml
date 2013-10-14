@@ -46,7 +46,7 @@
                   <li class="asset-meta-list-item">by <span class="author entry-author vcard"><$mt:EntryAuthorLink show_hcard="1"$></span></li>
 <mt:IfArchiveTypeEnabled archive_type="Category">
   <mt:If tag="EntryPrimaryCategory">
-                  <li class="asset-meta-list-item">カテゴリ: <mt:EntryPrimaryCategory><a itemprop="articleSection" rel="tag" href="<$mt:CategoryArchiveLink$>"><$mt:CategoryLabel$></a></mt:EntryPrimaryCategory></li>
+                  <li class="asset-meta-list-item"><__trans phrase="in [_1]" params="<mt:EntryPrimaryCategory><a itemprop="articleSection" rel="tag" href="<$mt:CategoryArchiveLink$>"><$mt:CategoryLabel$></a></mt:EntryPrimaryCategory>"></li>
   </mt:If>
 </mt:IfArchiveTypeEnabled>
                </ul>
@@ -59,10 +59,10 @@
             <nav class="page-navigation entry-navigation pagination content-nav">
               <ul class="page-navigation-list">
 <mt:EntryPrevious>
-                <li class="page-navigation-list-item page-navigation-prev"><a rel="prev" href="<$mt:EntryPermalink encode_html="1"$>" title="<$mt:EntryTitle encode_html="1"$>">前の記事</a></li>
+                <li class="page-navigation-list-item page-navigation-prev"><a rel="prev" href="<$mt:EntryPermalink encode_html="1"$>" title="<$mt:EntryTitle encode_html="1"$>"><__trans phrase="Previous entry"></a></li>
 </mt:EntryPrevious>
 <mt:EntryNext>
-                <li class="page-navigation-list-item page-navigation-next"><a rel="next" href="<$mt:EntryPermalink$>" title="<$mt:EntryTitle encode_html="1"$>">次の記事</a></li>
+                <li class="page-navigation-list-item page-navigation-next"><a rel="next" href="<$mt:EntryPermalink$>" title="<$mt:EntryTitle encode_html="1"$>"><__trans phrase="Next entry"></a></li>
 </mt:EntryNext>
               </ul>
             </nav>
