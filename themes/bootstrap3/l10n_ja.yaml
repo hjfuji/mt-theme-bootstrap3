@@ -30,3 +30,5 @@ Styles for Rainier: 'Rainier スタイル'
 A collection of styles compatible with Rainier themes.: 'Rainier のデフォルトテンプレートと互換性のあるスタイルです。'
 Stylesheet for IE (8 or lower): 'スタイルシート (IE8 以下用)'
 JavaScript - Theme: 'JavaScript - テーマ'
+If you want to link to top page of website, please set 'value="1"': グローバルナビゲーションの左端にウェブサイトのトップページへのリンクを出力する場合は、「value="1"」
+otherwise set 'value="0"': 出力しない場合は「value="0"」
