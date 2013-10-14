@@ -1,13 +1,13 @@
 <$mt:Include module="<__trans phrase="Settings">"$>
 <mt:If name="comment_confirmation">
-  <$mt:Var name="page_title" value="確認"$>
-  <$mt:Var name="message" value="<p class="message success">コメントを投稿しました。</p>"$>
+  <$mt:Var name="page_title" value="<__trans phrase="Confirmation...">"$>
+  <$mt:Var name="message" value="<p class="message success"><__trans phrase="Your comment has been submitted!"></p>"$>
 <mt:Else name="comment_pending">
-  <$mt:Var name="page_title" value="コメントありがとうございます。"$>
-  <$mt:Var name="message" value="<p class="message success">コメントは現在承認されるまで公開を保留されています。</p>"$>
+  <$mt:Var name="page_title" value="<__trans phrase="Thank you for commenting.">"$>
+  <$mt:Var name="message" value="<p class="message success"><__trans phrase="Your comment has been received and held for review by a blog administrator."></p>"$>
 <mt:Else name="comment_error">
-  <$mt:Var name="page_title" value="コメント投稿エラー"$>
-  <mt:SetVarBlock name="message"><p class="message error">コメントを投稿できませんでした。エラー: <$mt:ErrorMessage$></p></mt:SetVarBlock>
+  <$mt:Var name="page_title" value="<__trans phrase="Comment Submission Error">"$>
+  <mt:SetVarBlock name="message"><p class="message error"><__trans phrase="Your comment submission failed for the following reasons: [_1]" params="<$mt:ErrorMessage$>"></p></mt:SetVarBlock>
 </mt:If>
 <!DOCTYPE html>
 <html>
@@ -35,7 +35,7 @@
             <section>
               <h2 class="title"><$mt:Var name="page_title"$></h2>
               <$mt:Var name="message"$>
-              <p><a href="<mt:If name="comment_error">javascript:history.back()<mt:Else><$mt:EntryLink$></mt:If>">元の記事</a>に戻る</p>
+              <p><__trans phrase="Return to the <a href="[_1]">original entry</a>." params="<mt:If name="comment_error">javascript:history.back()<mt:Else><$mt:EntryLink$></mt:If>"></p>
             </section>
           </div>
         </div>
