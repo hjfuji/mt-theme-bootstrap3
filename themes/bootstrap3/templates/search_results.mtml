@@ -6,7 +6,7 @@
       var user = <$mt:UserSessionState$>;
     </script>
     <meta charset="<$mt:PublishCharset$>">
-    <title><$mt:BlogName encode_html="1"$> - 検索結果</title>
+    <title><$mt:BlogName encode_html="1"$> - <__trans phrase="Search Results"></title>
     <$mt:Include module="<__trans phrase="HTML Head">"$>
     <script src="<$mt:Link template="javascript"$>"></script>
     <script>
@@ -81,10 +81,10 @@
                 <span id="current-page" class="hidden"><$mt:CurrentPage$></span>
                 <h1 class="title">
       <mt:IfStraightSearch>
-                  「<$mt:SearchString$>」と一致するもの
+                  <__trans phrase="Results matching &ldquo;[_1]&rdquo;" params="<$mt:SearchString$>">
       </mt:IfStraightSearch>
       <mt:IfTagSearch>
-                  タグ「<$mt:SearchString$>」が付けられているもの
+                  <__trans phrase="Results tagged &ldquo;[_1]&rdquo;" params="<$mt:SearchString$>">
       </mt:IfTagSearch>
                 </h1>
     </mt:SearchResultsHeader>
@@ -96,10 +96,10 @@
               <nav class="pagination">
                 <ul>
       <mt:IfMoreResults>
-                  <li><a rel="prev" href="<$mt:NextLink encode_html="1"$>" onclick="return swapContent();">過去の記事</a></li>
+                  <li><a rel="prev" href="<$mt:NextLink encode_html="1"$>" onclick="return swapContent();"><__trans phrase="Older entries"></a></li>
       </mt:IfMoreResults>
       <mt:IfPreviousResults>
-                  <li><a rel="next" href="<$mt:PreviousLink encode_html="1"$>" onclick="return swapContent(-1);">新しい記事</a></li>
+                  <li><a rel="next" href="<$mt:PreviousLink encode_html="1"$>" onclick="return swapContent(-1);"><__trans phrase="Newer entries"></a></li>
       </mt:IfPreviousResults>
                 </ul>
               </nav>
@@ -113,24 +113,24 @@
               <section>
                 <h1 class="search-results-header">
   <mt:IfStraightSearch>
-                  「<$mt:SearchString$>」と一致するもの
+                  <__trans phrase="Results matching &ldquo;[_1]&rdquo;" params="<$mt:SearchString$>">
   </mt:IfStraightSearch>
   <mt:IfTagSearch>
-                  タグ「<$mt:SearchString$>」が付けられているもの
+                  <__trans phrase="Results tagged &ldquo;[_1]&rdquo;" params="<$mt:SearchString$>">
   </mt:IfTagSearch>
                 </h1>
-                <p>「<$mt:SearchString$>」と一致する結果は見つかりませんでした。</p>
+                <p><__trans phrase="No results found for &ldquo;[_1]&rdquo;." params="<$mt:SearchString$>"></p>
               </section>
 </mt:NoSearchResults>
 
 <mt:NoSearch>
               <section>
-                <h1 class="search-results-header">例</h1>
-                <p>すべての単語が順序に関係なく検索されます。フレーズで検索したいときは引用符で囲んでください。</p>
+                <h1 class="search-results-header"><__trans phrase="Instructions"></h1>
+                <p><__trans phrase="By default, this search engine looks for all of the specified words in any order. To search for an exact phrase, enclose the phrase in quotes:"></p>
                 <pre><code>"movable type"</code></pre>
-                <p>AND、OR、NOTを入れることで論理検索を行うこともできます。</p>
-                <pre><code>個人 OR 出版</code></pre>
-                <pre><code>個人 NOT 出版</code></pre>
+                <p><__trans phrase="The search engine also supports the AND, OR, and NOT boolean operators:"></p>
+                <pre><code><__trans phrase="personal OR publishing"></code></pre>
+                <pre><code><__trans phrase="publishing NOT personal"></code></pre>
               </section>
 </mt:NoSearch>
 
