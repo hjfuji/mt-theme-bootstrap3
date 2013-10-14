@@ -20,7 +20,7 @@ Settings: '設定'
 __VIEW_COMMENT: '[_1] から <a href="[_2]" title="[_3] のコメントを見る">[_3]</a>'
 <a href="[_1]">[_2]</a> - [_3]</a>: '<a href="[_1]">[_2]</a> - [_3]</a>'
 Please paste Zenback script code here.: 'ここに Zenback の Script コードを貼り付けてください。'
-__DESCRIPTION: 'Rainier はレスポンシブ Web デザインを採用したブログテーマです。Media Query (CSS) を利用したマルチデバイス対応に加え、Movable Type の機能を使ってロゴやナビゲーションの内容を簡単にカスタマイズできます。'
+__DESCRIPTION: 'Bootstrap 3はCSSフレームワークのBootstrap 3をベースにしたテーマです。。Media Query (CSS) を利用したマルチデバイス対応に加え、Movable Type の機能を使ってロゴやナビゲーションの内容を簡単にカスタマイズできます。'
 About Page: 'アバウトページ'
 _ABOUT_PAGE_BODY: '<p>このページはアバウトページ (自己紹介や会社概要など、プロフィール用のページ) として利用するウエブページの例です。</p><p>作成したウェブページに <code>@ABOUT_PAGE</code> というタグを設定すると、ページのヘッダ、フッタにあるナビゲーションにリンクが追加されます。</p>'
 Example page: 'ウェブページの例'
@@ -32,3 +32,4 @@ Stylesheet for IE (8 or lower): 'スタイルシート (IE8 以下用)'
 JavaScript - Theme: 'JavaScript - テーマ'
 If you want to link to top page of website, please set value="1": グローバルナビゲーションの左端にウェブサイトのトップページへのリンクを出力する場合は、「value="1"」
 otherwise set value="0": 出力しない場合は「value="0"」
+Hajime Fujimoto: 藤本　壱
