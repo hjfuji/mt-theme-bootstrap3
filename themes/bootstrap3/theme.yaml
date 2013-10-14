@@ -113,7 +113,7 @@ elements:
             label: 'Pagination'
           jumbotron: 
             label: Jumbotron
-          template_490: 
+          settings: 
             label: 'Settings'
           trackbacks: 
             label: 'Trackbacks'
