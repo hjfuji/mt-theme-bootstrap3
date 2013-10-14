@@ -3,7 +3,7 @@
 <html lang="<$mt:BlogLanguage$>">
   <head>
     <meta charset="<$mt:PublishCharset$>">
-    <title><$mt:ArchiveTitle$>アーカイブ - <$mt:BlogName encode_html="1"$></title>
+    <title><__trans phrase="[_1] Archives" params="<$mt:ArchiveTitle$>"> - <$mt:BlogName encode_html="1"$></title>
     <$mt:Include module="<__trans phrase="HTML Head">"$>
     <mt:ArchivePrevious><link rel="prev" href="<$mt:ArchiveLink$>" title="<$mt:ArchiveTitle encode_html="1"$>"></mt:ArchivePrevious>
     <mt:ArchiveNext><link rel="next" href="<$mt:ArchiveLink$>" title="<$mt:ArchiveTitle encode_html="1"$>"></mt:ArchiveNext>
@@ -20,11 +20,11 @@
         <div id="datebased-main" class="col-xs-12 col-sm-9 main" role="main">
           <ul class="breadcrumb breadcrumb-list">
             <li class="breadcrumb-list-item"><a href="<$mt:BlogURL encode_html="1"$>">Home</a></li>
-            <li class="breadcrumb-list-item"><$mt:ArchiveTitle$>アーカイブ</li>
+            <li class="breadcrumb-list-item"><__trans phrase="[_1] Archives" params="<$mt:ArchiveTitle$>"></li>
           </ul>
 
           <section id="posts">
-            <h2><$mt:ArchiveTitle$>アーカイブ</h2>
+            <h2><__trans phrase="[_1] Archives" params="<$mt:ArchiveTitle$>"></h2>
             <ol class="posts-list">
 <mt:Entries>
               <li>
