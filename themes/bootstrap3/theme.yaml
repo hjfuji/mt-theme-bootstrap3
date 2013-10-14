@@ -111,7 +111,7 @@ elements:
             label: 'Navigation'
           pagination: 
             label: 'Pagination'
-          template_489: 
+          jumbotron: 
             label: Jumbotron
           template_490: 
             label: 'Settings'
