@@ -1,4 +1,12 @@
       <div id="jumbotron" class="jumbotron">
-        <h1><a href="<$mt:BlogURL$>"><$mt:BlogName$></a></h1>
+        <h1>
+          <a href="<$mt:BlogURL$>">
+<mt:Assets type="image" tag="@SITE_LOGO" limit="1">
+            <img alt="<$mt:BlogName encode_html="1"$>" src="<$mt:AssetThumbnailURL encode_html="1"$>">
+<mt:Else>
+            <$mt:BlogName$>
+</mt:Assets>
+          </a>
+        </h1>
         <p><$mt:BlogDescription$></p>
       </div>
